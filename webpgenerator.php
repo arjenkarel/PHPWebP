@@ -106,12 +106,12 @@ class WebPConvert{
 		// shell exec cwebp
 		if(WEBP_WRITE_TO_DISK){
 			header('Content-type:image/webp');
-			echo shell_exec('cwebp '.$aFile['orig_abspath'].' -q '.WEBP_QUALITY.' -quiet -o '.$aFile['webp_abspath']);
+			echo shell_exec('cwebp '.escapeshellarg($aFile['orig_abspath']).' -q '.WEBP_QUALITY.' -quiet -o '.escapeshellarg($aFile['webp_abspath']));
 			header('Content-type:image/webp');
 				echo readfile($aFile['webp_abspath']);
 		} else {
 			header('Content-type:image/webp');
-			echo shell_exec('cwebp '.$aFile['orig_abspath'].' -q '.WEBP_QUALITY.' -quiet -o -');
+			echo shell_exec('cwebp '.escapeshellarg($aFile['orig_abspath']).' -q '.WEBP_QUALITY.' -quiet -o -');
 		}
 		exit();
 	}
