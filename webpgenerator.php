@@ -1,6 +1,6 @@
 <?php
 /* 
-Simple WEBP generator scriopt by marketingtracer.com.
+Simple WEBP generator script by marketingtracer.com.
 
 MIT License
 
